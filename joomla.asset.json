@@ -1,0 +1,26 @@
+{
+  "$schema": "https://developer.joomla.org/schemas/json-schema/web_assets.json",
+  "name": "scrapbook",
+  "version": "4.0.0",
+  "description": "Carcass is a Joomla 4.x site template",
+  "license": "GPL-2.0+",
+  "assets": [
+    {
+      "name": "template.carcass.base",
+      "dependencies": [
+        "core",
+        "jquery-noconflict",
+        "fontawesome-free",
+        "bootstrap.js.bundle"
+      ],
+      "scripts": [
+        "user.js"
+      ],
+      "css": [
+        "bootstrap.css",
+        "scrapbook.css",
+        "user.css"
+      ]
+    }
+  ]
+}
