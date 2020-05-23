@@ -187,6 +187,13 @@ nav {
   }
 }
 
+@media screen and (min-width: 47em) {
+
+  ul.sub-open {
+    right: -9em !important;
+  }
+}
+
 /*
 @media screen and (min-width: 47em) {
 
@@ -256,5 +263,4 @@ nav {
     }
   }
 }
-
- */
+*/
