@@ -391,7 +391,11 @@ div.search-container {
             margin: 0 .5em;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
-            content: "\e605";
+            content: "\e608";
+          }
+
+          button {
+            @include visuallyhidden;
           }
         }
 
@@ -440,7 +444,7 @@ div.search-container {
                 margin: 0 .5em 0 0;
                 -webkit-font-smoothing: antialiased;
                 -moz-osx-font-smoothing: grayscale;
-                content: "\e601";
+                content: "\e605";
               }
             }
           }

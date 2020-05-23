@@ -73,6 +73,11 @@ $prism       = $this->params->get('js-prism');
 	</script>
 <?php endif; ?>
 
+    <!-- script für nav -->
+<?php if ($this->countModules('nav')): ?>
+    <script type="text/javascript" src="<?php echo $tpath . '/scripts/nav.js'; ?>"></script>
+<?php endif; ?>
+
 <!-- script für aside -->
 <?php if ($this->countModules('sidebar')): ?>
 	<script type="text/javascript" src="<?php echo $tpath . '/scripts/sidebar.js'; ?>"></script>
