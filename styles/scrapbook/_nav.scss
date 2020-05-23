@@ -79,10 +79,9 @@ nav {
         ul.sub-open {
           display: block;
           position: absolute;
-          top: 5.5em;
-          right: 0;
           width: 12em;
-          margin: .5em 0;
+          margin: 3em 0 0 3em;
+          right: .5em;
           padding: .5em 0;
           background: $smoke;
           @include border-radius($baseBorderRadius);
@@ -190,7 +189,8 @@ nav {
 @media screen and (min-width: 47em) {
 
   ul.sub-open {
-    right: -9em !important;
+    margin: 3em 0 0 12em !important;
+    right: -8.5em !important;
   }
 }
 
