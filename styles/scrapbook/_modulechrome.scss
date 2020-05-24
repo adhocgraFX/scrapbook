@@ -11,7 +11,9 @@
   border-bottom: 1px solid $gainsboro;
 
   a {
-    text-transform: uppercase; // je nach geschmack
+    // je nach geschmack
+    // text-transform: uppercase;
+    font-family: $body-font, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
 
   a:hover, a:active {
@@ -405,7 +407,6 @@ div.search-container {
           display: block;
           padding: .5em 1em;
           border-bottom: 1px solid $gainsboro-light;
-          text-transform: uppercase;
           -webkit-transition: all 0.3s ease-out;
           transition: all 0.3s ease-out;
 

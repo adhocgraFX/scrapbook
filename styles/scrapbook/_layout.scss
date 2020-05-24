@@ -267,7 +267,7 @@ section.bottom {
 
     main {
       margin: 0 auto;
-      @include flex(9);
+      @include flex(8);
 
       section.content {
         margin: .5em auto;
@@ -289,7 +289,7 @@ section.bottom {
       @include justify-content(flex-start);
       @include align-items(stretch);
       @include align-content(flex-start);
-      @include flex(3);
+      @include flex(5);
 
       .module,
       .search-container,
@@ -358,6 +358,50 @@ section.bottom {
     }
   }
 
+  body.fifty {
+    section.main-container {
+      max-width: 100% !important;
+
+      main {
+        padding: 0 !important;
+        // @include flex(12);
+
+        section.content {
+          max-width: 100% !important;
+          margin: 1em .5em 1em 1em;
+
+          div.blog-item {
+            width: 100%;
+
+            div.blog-item-content {
+              width: 100%;
+
+              @include flex-display;
+              @include flex-flow(column nowrap);
+
+              figure.item-image {
+                width: 100%;
+                border: 0;
+
+                @include flex-display;
+                @include flex-flow(column nowrap);
+              }
+
+              div.item-content {
+                max-width: 32em;
+                margin: 0 auto;
+                padding: 1em 1em 2em 1em;
+
+                @include flex-display;
+                @include flex-flow(column nowrap);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
   body.cards {
     section.main-container {
       max-width: 100% !important;
@@ -365,7 +409,7 @@ section.bottom {
       main {
         // @include flex(12);
 
-        section.content  {
+        section.content {
           max-width: 100% !important;
           margin-top: 0;
 
@@ -377,10 +421,11 @@ section.bottom {
 
             article {
               @include flex(1 1 auto);
+              width: 32em;
               max-width: 40em;
 
               &.leading {
-                width: 24em;
+                width: 32em;
 
                 figure {
                   margin: -1em -1em 0.75em -1em;
@@ -389,7 +434,7 @@ section.bottom {
               }
 
               &.item {
-                width: 24em;
+                width: 32em;
 
                 figure {
                   margin: -1em -1em 0.75em -1em;
@@ -398,6 +443,7 @@ section.bottom {
               }
 
               &:last-of-type {
+                width: 32em;
                 max-width: 40em;
               }
 
@@ -411,7 +457,6 @@ section.bottom {
       }
     }
   }
-
 
   body.masonry {
     section.main-container {
@@ -503,12 +548,54 @@ section.bottom {
 
 @media screen and (min-width: 64em) {
 
+  body.fifty {
+    section.main-container {
+      max-width: 100% !important;
+
+      main {
+        padding: 0 !important;
+
+        section.content {
+          max-width: 100% !important;
+          margin: 1em .5em 1em 1em;
+
+          div.blog-item {
+            width: 100%;
+
+            &:nth-of-type(2n+0) {
+
+              div.blog-item-content {
+                @include flex-flow(row-reverse nowrap);
+              }
+            }
+
+            div.blog-item-content {
+              @include flex-flow(row nowrap);
+
+              figure.item-image {
+                width: 50%;
+                border: 0;
+              }
+
+              div.item-content {
+                width: 50%;
+                max-width: 32em;
+                margin: 0 auto;
+                padding: 1em 1em 2em 1em;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
   body.masonry {
     section.main-container {
       max-width: 100% !important;
 
       main {
-        section.content  {
+        section.content {
           max-width: 100% !important;
           margin-top: 0;
 
@@ -534,13 +621,11 @@ section.bottom {
     max-width: 56em;
   }
 
-
-
   section.main-container {
     // max-width: 80em;
 
     main {
-      @include flex(12);
+      @include flex(9);
     }
 
     aside.sidebar-container,

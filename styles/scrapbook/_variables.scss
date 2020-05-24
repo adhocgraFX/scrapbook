@@ -23,16 +23,16 @@ $color-info: $colorBlue500;
 // buttons: background: color-primary -accent; text: color-primary-text -accent-text
 
 // primary- und accent-color nach material design
-$color-primary:         $colorIndigo900;
-$color-accent:          $colorPink600;
+$color-primary: $colorBlueGrey600;
+$color-accent: $colorPink600;
 
 // primary und accent text color je nach primary und accent color
-$color-primary-text:    $whitesmoke;
-$color-accent-text:     $whitesmoke;
+$color-primary-text: $whitesmoke;
+$color-accent-text: $whitesmoke;
 
 // section colors
 // slideshow
-$color-slider-back:     $gainsboro-dark;
+$color-slider-back: $gainsboro-dark;
 // rows
 $color-top-row-back:    $smoke;
 $color-bottom-row-back: $smoke;
@@ -63,27 +63,27 @@ $color-nav-back:        transparent;
 $color-aside-back:      $whitesmoke;
 
 // link colors mit accent color in sync
-$color-link:            $color-accent;
-$color-link-hover:      lighten($color-link, 10%);
-$color-link-focus:      darken($color-link, 5%);
-$color-link-active:     darken($color-link, 10%);
-$color-link-visited:    $color-accent; // todo was ist am besten?
+$color-link: $color-accent;
+$color-link-hover: lighten($color-link, 10%);
+$color-link-focus: darken($color-link, 5%);
+$color-link-active: darken($color-link, 10%);
+$color-link-visited: $color-accent; // todo was ist am besten?
 
 // Typeplate inspired font variables plus even more ...
 $weight: normal;
 
-$line-height-default:   1.4;
-$line-height-medium:    1.45;
-$line-height-large:     1.5;
+$line-height-default: 1.3;
+$line-height-medium: 1.35;
+$line-height-large: 1.4;
 
-$line-height-heading:   1.1;
+$line-height-heading: 1.1;
 
 $font-size-default: 100%;
-$font-size-medium:  112.5%; // percentage value (16 * 112.5% = 18px)
-$font-size-large:   125%; // percentage value (16 * 125% = 20px)
+$font-size-medium: 112.5%; // percentage value (16 * 112.5% = 18px)
+$font-size-large: 125%; // percentage value (16 * 125% = 20px)
 
-$font-size-small:   87.5%; // percentage value (16 * 87.5% = 14px)
-$font-size-mini:    75%; // percentage value (16 * 75% = 12px)
+$font-size-small: 87.5%; // percentage value (16 * 87.5% = 14px)
+$font-size-mini: 75%; // percentage value (16 * 75% = 12px)
 
 
 // responsive type scale mixin
@@ -104,19 +104,19 @@ $ratio-large: 1.333; // large desktop scale
 
 
 // primary fonts to select
-$body-font:    'Fira Sans';
-$heading-font: 'Fira Sans';
-$nav-font: 'Fira Sans';
+$body-font: 'Source Sans Pro' !default; //'Fira Sans' !default;
+$heading-font: 'Bitter' !default; // 'Fira Sans'!default;
+$nav-font: 'Source Sans Pro' !default; // 'Fira Sans';
 $mono-font: 'Fira Mono';
 
 $font-path: "../fonts";
 $icon-font-path: "../fonts/icons";
 
 // font-weights to choose and combine
-$thin:          100;
-$hairline:      $thin;
+$thin: 100;
+$hairline: $thin;
 
-$extra-light:   200;
+$extra-light: 200;
 
 $light:         300;
 
