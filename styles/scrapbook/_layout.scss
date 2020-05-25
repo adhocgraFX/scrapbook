@@ -329,17 +329,17 @@ section.bottom {
 
       main {
         padding: 0 !important;
-        // @include flex(12);
 
         section.content {
           max-width: 100% !important;
-          margin: 1em .5em 1em 1em;
+          margin: 0; // 1em .5em 1em 1em;
 
           div.blog-item {
             width: 100%;
 
             div.blog-item-content {
               width: 100%;
+              border-bottom: 0;
 
               figure.item-image {
                 width: 100%;
@@ -375,6 +375,8 @@ section.bottom {
 
             div.blog-item-content {
               width: 100%;
+              font-size: $font-size-small;
+              border: 1px solid $gainsboro-light;
 
               @include flex-display;
               @include flex-flow(column nowrap);
@@ -382,6 +384,7 @@ section.bottom {
               figure.item-image {
                 width: 100%;
                 border: 0;
+                margin-bottom: 0;
 
                 @include flex-display;
                 @include flex-flow(column nowrap);
@@ -407,7 +410,6 @@ section.bottom {
       max-width: 100% !important;
 
       main {
-        // @include flex(12);
 
         section.content {
           max-width: 100% !important;
@@ -421,11 +423,11 @@ section.bottom {
 
             article {
               @include flex(1 1 auto);
-              width: 32em;
-              max-width: 40em;
+              width: 24em;
+              max-width: 32em;
 
               &.leading {
-                width: 32em;
+                width: 24em;
 
                 figure {
                   margin: -1em -1em 0.75em -1em;
@@ -434,7 +436,7 @@ section.bottom {
               }
 
               &.item {
-                width: 32em;
+                width: 24em;
 
                 figure {
                   margin: -1em -1em 0.75em -1em;
@@ -443,8 +445,8 @@ section.bottom {
               }
 
               &:last-of-type {
-                width: 32em;
-                max-width: 40em;
+                width: 24em;
+                max-width: 32em;
               }
 
               figure {
