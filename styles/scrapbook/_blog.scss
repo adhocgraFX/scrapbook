@@ -40,13 +40,6 @@ article {
   }
 
   // paragraph class lead
-  p.lead {
-    font-size: $font-size-medium;
-    margin-top: $paragraph-val;
-    margin-bottom: $indent-val;
-    text-indent: 0;
-    font-weight: $light;
-  }
 
   div.img_caption {
     width: auto !important;

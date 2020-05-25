@@ -2,9 +2,9 @@
 // Font-weights in use: 300, 300i, 400, 400i, 500, 500i, 700, 700i
 
 body {
-  font-size: $font-size-default;      // 100% = 16px
-  font-weight: $book;         // wird nur noch bei Abweichungen angegeben
-  line-height: $line-height-default;  // wird nur noch bei Abweichungen angegeben
+  font-size: $font-size-default; // 100% = 16px
+  font-weight: $book; // wird nur noch bei Abweichungen angegeben
+  line-height: $line-height-default; // wird nur noch bei Abweichungen angegeben
   color: $color-body-copy;
   background: $color-body;
   font-family: $body-font, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
@@ -31,7 +31,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: $paragraph-val / 2;
 
   // nach Trent Walton siehe mixins
-  @include css-hyphens (auto);
+  @include css-hyphens(auto);
   @include normal-wrap;
 
   // text rendering
@@ -49,17 +49,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 // heading scale
-@include typo-scale ($ratio-default);
+@include typo-scale($ratio-default);
 
 article {
   h1, h2, h3, h4 {
     font-weight: $book !important;
-    color: $color-heading  !important;
+    color: $color-heading !important;
   }
 
   h5 {
     font-weight: $bold !important;
-    color: $color-heading  !important;
+    color: $color-heading !important;
   }
 
   h6 {
@@ -85,14 +85,14 @@ p {
     margin: 0;
   }
 
-  /* siehe j blog less
-  &.lead {
-      font-size: $font-size-large;
-      margin-top: $paragraph-val;
-      margin-bottom: $indent-val;
-      text-indent: 0;
-      font-weight: $light;
-  } */
+  &.lead, &.leading {
+    font-size: $font-size-medium;
+    margin-top: $paragraph-val;
+    margin-bottom: $paragraph-val;
+    text-indent: 0;
+    font-weight: $medium;
+    color: $color-heading;
+  }
 
   &.bildlegende {
     text-indent: 0;
@@ -137,7 +137,7 @@ span {
 article {
   p, ul {
     // nach Trent Walton siehe mixins
-    @include css-hyphens (auto);
+    @include css-hyphens(auto);
     @include normal-wrap;
 
     // text rendering
@@ -156,7 +156,7 @@ a {
   text-decoration: none;
   color: $color-link;
 
-  &:hover{
+  &:hover {
     color: $color-link-hover;
     text-decoration: none;
   }
@@ -454,6 +454,7 @@ blockquote {
       &:hover {
         color: $concrete-dark;
       }
+
       &:visited, &:active {
         color: darken($concrete-dark, 5%);
       }
@@ -493,7 +494,7 @@ article {
   }
 
   // heading scale
-  @include typo-scale ($ratio-medium);
+  @include typo-scale($ratio-medium);
 
   // paragraph styles plus helper classes
   p {
@@ -518,7 +519,7 @@ article {
   }
 
   // heading scale
-  @include typo-scale ($ratio-large);
+  @include typo-scale($ratio-large);
 
   // paragraph styles plus helper classes
   p {
