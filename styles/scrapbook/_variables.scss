@@ -85,6 +85,8 @@ $font-size-large: 125%; // percentage value (16 * 125% = 20px)
 $font-size-small: 87.5%; // percentage value (16 * 87.5% = 14px)
 $font-size-mini: 75%; // percentage value (16 * 75% = 12px)
 
+// je nach type
+$nav-font-size: 100%;
 
 // responsive type scale mixin
 // 3 heading scale modes
@@ -104,9 +106,9 @@ $ratio-large: 1.333; // large desktop scale
 
 
 // primary fonts to select
-$body-font: 'Source Sans Pro' !default; //'Fira Sans' !default;
-$heading-font: 'Bitter' !default; // 'Fira Sans'!default;
-$nav-font: 'Source Sans Pro' !default; // 'Fira Sans';
+$body-font: 'Neucha' !default; //'Fira Sans' !default;
+$heading-font: 'Patrick Hand SC' !default; // 'Fira Sans'!default;
+$nav-font: 'Patrick Hand SC' !default; // 'Fira Sans';
 $mono-font: 'Fira Mono' !default;
 
 $font-path: "../fonts";

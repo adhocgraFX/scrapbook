@@ -184,7 +184,7 @@ body {
 
     color: $color-brand-text;
     font-size: 1.5em; // fallback
-    font-size: 3vw;
+    // font-size: 3vw;
     line-height: 1;
     font-weight: $light;
     margin: 0 .5em;
@@ -374,8 +374,8 @@ body {
 
     h1.logo-text {
       text-align: center;
-      font-size: 1.5em; // fallback
-      font-size: 2.5vw;
+      font-size: 2em; // fallback
+      // font-size: 2.0vw;
     }
   }
 
@@ -453,11 +453,13 @@ body {
 }
 
 @media all and (max-width: 30em) {
+  /*
+    .app-bar-container h1.logo-text {
+      font-size: 1.5em;
+      font-size: 3vw;
+    }
 
-  .app-bar-container h1.logo-text {
-    font-size: 1.25em;
-    font-size: 3vw;
-  }
+   */
 }
 
 @media all and (min-width: 47em) and (max-width: 64em) {

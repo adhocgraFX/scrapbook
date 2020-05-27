@@ -70,7 +70,7 @@ section.layout {
 .nav-container {
   background: transparent;
   display: block;
-  font-size: .875em;
+  font-size: $nav-font-size;
   // border-top: 1px solid $gainsboro;
   // @include box-shadows(0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12));
 
@@ -360,41 +360,24 @@ section.bottom {
 
   body.fifty {
     section.main-container {
-      max-width: 100% !important;
 
       main {
-        padding: 0 !important;
-        // @include flex(12);
 
         section.content {
-          max-width: 100% !important;
-          margin: 1em .5em 1em 1em;
 
           div.blog-item {
-            width: 100%;
 
             div.blog-item-content {
-              width: 100%;
-              font-size: $font-size-small;
-              border: 1px solid $gainsboro-light;
 
               @include flex-display;
               @include flex-flow(column nowrap);
 
               figure.item-image {
-                width: 100%;
-                border: 0;
-                margin-bottom: 0;
-
                 @include flex-display;
                 @include flex-flow(column nowrap);
               }
 
               div.item-content {
-                max-width: 32em;
-                margin: 0 auto;
-                padding: 1em 1em 2em 1em;
-
                 @include flex-display;
                 @include flex-flow(column nowrap);
               }
@@ -552,17 +535,12 @@ section.bottom {
 
   body.fifty {
     section.main-container {
-      max-width: 100% !important;
 
       main {
-        padding: 0 !important;
 
         section.content {
-          max-width: 100% !important;
-          margin: 1em .5em 1em 1em;
 
           div.blog-item {
-            width: 100%;
 
             &:nth-of-type(2n+0) {
 
@@ -576,14 +554,11 @@ section.bottom {
 
               figure.item-image {
                 width: 50%;
-                border: 0;
               }
 
               div.item-content {
                 width: 50%;
                 max-width: 32em;
-                margin: 0 auto;
-                padding: 1em 1em 2em 1em;
               }
             }
           }
