@@ -15,6 +15,7 @@
 		<ul>
 			<li>nav</li>
 			<li>search</li>
+			<li>slideshow</li>
 			<li>sidebar</li>
 			<li>breadcrumbs</li>
 			<li>footer</li>
@@ -45,6 +46,7 @@
     <positions>
         <position>nav</position>
         <position>search</position>
+        <position>slideshow</position>
         <position>sidebar</position>
         <position>breadcrumbs</position>
         <position>footer</position>

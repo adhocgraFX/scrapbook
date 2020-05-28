@@ -282,7 +282,7 @@ section.bottom {
 
     aside.sidebar-container,
     aside.leftbar-container {
-      margin: .5em 0 0 0;
+      margin: 0;
 
       @include flex-display;
       @include flex-flow(row wrap);

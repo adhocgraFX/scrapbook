@@ -86,26 +86,33 @@ $this->setMetaData('viewport', 'width=device-width, initial-scale=1');
 	<?php endif; ?>
 
     <section class="app-bar-container">
-		<h1 class="logo-text">
+        <h1 class="logo-text">
             <a href="<?php echo $this->baseurl ?>"><?php echo htmlspecialchars($sitename); ?></a>
         </h1>
-		<?php if ($this->countModules('sidebar')): ?>
+	    <?php if ($this->countModules('sidebar')): ?>
             <button class="sidebar-menu" aria-label="Navigation"></button>
-		<?php endif; ?>
+	    <?php endif; ?>
     </section>
 </header>
 
 <section class="layout block-group">
+
+	<?php if ($this->countModules('slideshow')): ?>
+        <section class="slider-container" role="complementary">
+            <jdoc:include type="modules" name="slideshow" style="flickity"/>
+        </section>
+	<?php endif; ?>
+
     <section class="main-container">
 
         <aside class="sidebar-container" role="complementary">
             <h4 class="sidebar-text">Sidebar</h4>
 
-	        <?php if ($this->countModules('search')): ?>
+			<?php if ($this->countModules('search')): ?>
                 <div class="search-container">
-                    <jdoc:include type="modules" name="search" style=" none"/>
+                    <jdoc:include type="modules" name="search" style="none"/>
                 </div>
-	        <?php endif; ?>
+			<?php endif; ?>
 
 	        <?php if ($this->countModules('nav')): ?>
                 <nav class="nav-container" id="navdrawer" role="navigation">
@@ -128,12 +135,6 @@ $this->setMetaData('viewport', 'width=device-width, initial-scale=1');
         </aside>
 
         <main role="main">
-	        <?php if ($this->countModules('slideshow')): ?>
-                <section class="slider-container" role="complementary">
-                    <jdoc:include type="modules" name="slideshow" style="flickity"/>
-                </section>
-	        <?php endif; ?>
-
             <section class="content">
                 <jdoc:include type="message"/>
                 <jdoc:include type="component"/>
