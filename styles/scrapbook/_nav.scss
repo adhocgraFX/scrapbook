@@ -68,8 +68,11 @@ nav {
         @include justify-content(space-between);
 
         a {
-          width: 12em;
           @include flex-display;
+          @include flex-flow(row nowrap);
+          @include align-items(center);
+          width: 100%;
+
         }
 
         ul.sub {
@@ -193,74 +196,3 @@ nav {
     right: -8.5em !important;
   }
 }
-
-/*
-@media screen and (min-width: 47em) {
-
-  nav ul.nav {
-
-    li:first-child {
-      border-top: 1px solid $color-brand-darker;
-    }
-
-    ul {
-      position: absolute;
-      margin: -1em 0 0 -6em;
-      width: 12em;
-      padding: .5em 0;
-      background: $smoke;
-      @include border-radius($baseBorderRadius);
-      border: 1px solid $color-brand-text;
-
-      opacity: 0.90;
-      filter: Alpha(Opacity=90);
-
-      display: none;
-
-      li {
-        text-align: left;
-        background: $color-brand;
-
-        &.deeper, &.parent {
-          height: 3em;
-        }
-
-        a {
-          padding: 1em;
-          height: 3em;
-          color: $color-brand-text;
-
-          &:before {
-            display: inline-block;
-            font-family: 'adhocicon';
-            font-style: normal;
-            font-weight: normal;
-            font-size: 1em;
-            line-height: 1;
-            margin: 0 .5em 0 0;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            content: "\e601";
-          }
-        }
-      }
-
-      ul {
-        display: none;
-
-        position: absolute;
-        margin: -1em 0 0 -6em;
-        width: 12em;
-
-        li a {
-          padding-left: 1em;
-        }
-      }
-
-      li:hover ul.nav-child {
-        display: block;
-      }
-    }
-  }
-}
-*/

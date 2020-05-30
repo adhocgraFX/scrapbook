@@ -14,6 +14,7 @@ div.items-row {
   background: transparent;
 }
 
+// article muss als html override vorhanden sein!
 article {
   padding: .5em;
   margin: 0;
@@ -34,13 +35,7 @@ article {
     background: transparent;
     padding: .5em;
     margin: 0;
-
-    p.lead {
-      font-size: $font-size-large !important;
-    }
   }
-
-  // paragraph class lead
 
   div.img_caption {
     width: auto !important;
@@ -116,6 +111,24 @@ div.subheading-category {
   line-height: $line-height-heading;
   padding: 0;
   border-bottom: 0 !important;
+}
+
+// p lead, leading differenzieren
+.blog-item-content {
+
+  p.lead, p.leading {
+    // font-size: $font-size-medium;
+    // font-weight: $normal;
+  }
+}
+
+.item-page {
+
+  p.lead, p.leading {
+    // font-size: $font-size-medium;
+    font-weight: $medium;
+    // color: $color-heading
+  }
 }
 
 // details
