@@ -17,7 +17,7 @@ use Joomla\CMS\HTML\HTMLHelper;
 HTMLHelper::_('bootstrap.framework');
 
 // Add Stylesheets
-HTMLHelper::_('stylesheet', 'template.css', ['version' => 'auto', 'relative' => true]);
+HTMLHelper::_('stylesheet', 'scrapbook.css', ['version' => 'auto', 'relative' => true]);
 
 ?>
 

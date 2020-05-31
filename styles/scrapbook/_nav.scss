@@ -39,11 +39,13 @@ nav {
         // text-transform: uppercase;
         -webkit-transition: all 0.3s ease-out;
         transition: all 0.3s ease-out;
-        display: block;
         padding: 1em;
         border-top: 1px solid $gainsboro-light;
         border-bottom: 1px solid $gainsboro-light;
         height: 3em;
+
+        @include flex-display;
+        @include align-items(center);
 
         &:hover {
           color: $color-brand-text;

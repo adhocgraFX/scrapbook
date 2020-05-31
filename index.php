@@ -41,9 +41,8 @@ $buttontext = $this->params->get('buttontext');
 $buttonlink = $this->params->get('buttonlink');
 
 
-
 // Enable assets
-$wa->enableAsset('template.carcass.base');
+$wa->enableAsset('template.scrapbook.base');
 
 // meta data
 $this->setMetaData('viewport', 'width=device-width, initial-scale=1');
@@ -76,6 +75,7 @@ $this->setMetaData('viewport', 'width=device-width, initial-scale=1');
               <?php echo($itemid ? ' itemid-' . $itemid : ''); ?>" role="document">
 
 <header class="app-bar" role="banner">
+    <!-- logo image position -->
 	<?php if ($logo): ?>
         <div class="logo-image">
             <a href="<?php echo $this->baseurl ?>">
@@ -86,17 +86,19 @@ $this->setMetaData('viewport', 'width=device-width, initial-scale=1');
 	<?php endif; ?>
 
     <section class="app-bar-container">
+        <!-- site title -->
         <h1 class="logo-text">
             <a href="<?php echo $this->baseurl ?>"><?php echo htmlspecialchars($sitename); ?></a>
         </h1>
-	    <?php if ($this->countModules('sidebar')): ?>
+        <!-- mobile button -->
+		<?php if ($this->countModules('sidebar')): ?>
             <button class="sidebar-menu" aria-label="Navigation"></button>
-	    <?php endif; ?>
+		<?php endif; ?>
     </section>
 </header>
 
 <section class="layout block-group">
-
+    <!-- slideshow position -->
 	<?php if ($this->countModules('slideshow')): ?>
         <section class="slider-container" role="complementary">
             <jdoc:include type="modules" name="slideshow" style="flickity"/>
@@ -104,58 +106,58 @@ $this->setMetaData('viewport', 'width=device-width, initial-scale=1');
 	<?php endif; ?>
 
     <section class="main-container">
-
         <aside class="sidebar-container" role="complementary">
+            <!-- sidebar title -->
             <h4 class="sidebar-text">Sidebar</h4>
-
+            <!-- search position -->
 			<?php if ($this->countModules('search')): ?>
                 <div class="search-container">
                     <jdoc:include type="modules" name="search" style="none"/>
                 </div>
 			<?php endif; ?>
-
-	        <?php if ($this->countModules('nav')): ?>
+            <!-- nav position -->
+			<?php if ($this->countModules('nav')): ?>
                 <nav class="nav-container" id="navdrawer" role="navigation">
                     <div class="module-title">
                         <h4 class="title">Menu</h4>
                     </div>
                     <jdoc:include type="modules" name="nav"/>
-                </nav    >
-            <?php endif; ?>
-
-		    <?php if ($this->countModules('sidebar')): ?>
+                </nav>
+			<?php endif; ?>
+            <!-- sidebar position -->
+			<?php if ($this->countModules('sidebar')): ?>
                 <jdoc:include type="modules" name="sidebar" style="jduo"/>
-		    <?php endif; ?>
-
-		    <?php if ($this->countModules('footer')): ?>
-                <footer class="block-group" role="contentinfo">
-                    <jdoc:include type="modules" name="footer" style="footer"/>
-                </footer>
-		    <?php endif; ?>
+			<?php endif; ?>
         </aside>
-
+        <!-- main position -->
         <main role="main">
             <section class="content">
                 <jdoc:include type="message"/>
                 <jdoc:include type="component"/>
             </section>
         </main>
-
     </section>
 </section>
 
 <section class="footer-wrapper block-group">
+    <!-- breadcrumbs -->
 	<?php if ($this->countModules('breadcrumbs')): ?>
         <section class="breadcrumbs-container block-group" role="navigation">
-            <jdoc:include type="modules" name="breadcrumbs"style="none" />
+            <jdoc:include type="modules" name="breadcrumbs" style="none"/>
         </section>
+	<?php endif; ?>
+    <!-- footer position -->
+	<?php if ($this->countModules('footer')): ?>
+        <footer class="block-group" role="contentinfo">
+            <jdoc:include type="modules" name="footer" style="footer"/>
+        </footer>
 	<?php endif; ?>
 </section>
 
 <!-- to top -->
 <a href="#" class="go-top"><span class="icon-chevron-up"></span>
     <p hidden>Top</p></a>
-
+<!-- debug position -->
 <jdoc:include type="modules" name="debug" style="none"/>
 
 <!-- load scripts -->

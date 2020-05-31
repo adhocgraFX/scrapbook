@@ -262,12 +262,12 @@ div.search-container {
     @include justify-content(center);
     background: transparent;
     border: 0;
+    width: 100%;
   }
 
   form.form-search {
     margin: 0;
-    width: 100%;
-
+    // width: 100%;
     // flex
     @include flex-display;
     @include align-items(center);
@@ -276,37 +276,31 @@ div.search-container {
       @include visuallyhidden;
     }
 
-    div.input-group {
-      // flex
-      @include flex-display;
-      @include flex-flow(row nowrap);
-      margin: .5em .25em;
+    div.awesomplete {
+      @include flex(1 1 auto);
+      margin: 0;
+      width: 100% !important;
 
-      div.awesomplete {
-        @include flex(1 1 auto);
-        margin: 0;
+      input {
+        width: 100%;
+        color: $color-subheading;
 
-        input {
-          width: 100%;
-          color: $color-subheading;
-
-          &:focus {
-            color: $color-heading;
-          }
+        &:focus {
+          color: $color-heading;
         }
       }
+    }
 
-      span.input-group-append {
-        @include flex(1 1 auto);
-        margin: 0;
+    span.input-group-append {
+      @include flex(1 1 auto);
+      margin: 0;
 
-        button {
-          text-align: left;
-          width: max-content;
+      button {
+        text-align: left;
+        width: max-content;
 
-          span {
-            text-align: right;
-          }
+        span {
+          text-align: right;
         }
       }
     }
@@ -324,7 +318,7 @@ div.search-container {
       max-height: 3em;
       margin: 0;
 
-      ul  {
+      ul {
         margin: 0;
         padding: 0;
         list-style-type: none;
@@ -427,6 +421,7 @@ div.search-container {
 
           li {
             margin-left: 0 !important;
+
             a {
               border-bottom: 1px solid $gainsboro;
 

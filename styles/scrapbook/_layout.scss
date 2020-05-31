@@ -488,7 +488,7 @@ section.bottom {
   .search-container,
   .nav-container {
     @include flex(1 1 auto);
-    max-width: 12em;
+    width: 100% !important;
     background-color: transparent;
   }
 
