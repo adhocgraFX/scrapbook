@@ -1,7 +1,7 @@
 <?php
 /**
  * @package     Joomla.Site
- * @subpackage  Templates.carcass
+ * @subpackage  Templates.scrapbook
  *
  * @copyright   Copyright (C) 2005 - 2019 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
@@ -34,12 +34,6 @@ $tpath     = $this->baseurl . '/templates/' . $this->template;
 // get template params
 // logo
 $logo = $this->params->get('logo');
-// header style
-$headerbackground = $this->params->get('headerbackground');
-// call to action
-$buttontext = $this->params->get('buttontext');
-$buttonlink = $this->params->get('buttonlink');
-
 
 // Enable assets
 $wa->enableAsset('template.scrapbook.base');
@@ -66,8 +60,6 @@ $this->setMetaData('viewport', 'width=device-width, initial-scale=1');
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-    <!-- load css options -->
-	<?php include_once('css/template.css.php'); ?>
 </head>
 
 <body class=" <?php echo $pageclass ?>
@@ -118,9 +110,6 @@ $this->setMetaData('viewport', 'width=device-width, initial-scale=1');
             <!-- nav position -->
 			<?php if ($this->countModules('nav')): ?>
                 <nav class="nav-container" id="navdrawer" role="navigation">
-                    <div class="module-title">
-                        <h4 class="title">Menu</h4>
-                    </div>
                     <jdoc:include type="modules" name="nav"/>
                 </nav>
 			<?php endif; ?>

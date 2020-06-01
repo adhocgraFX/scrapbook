@@ -8,8 +8,6 @@ $c_infotext   = $this->params->get('cookieinfotext');
 $c_buttontext = $this->params->get('cookiebuttontext');
 $c_linktext   = $this->params->get('cookielinktext');
 $c_link       = $this->params->get('cookielink');
-// header style
-$headerbackground = $this->params->get('headerbackground');
 // slideshow slider
 $slider       = $this->params->get('slideshow');
 // code display
