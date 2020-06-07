@@ -83,7 +83,7 @@ $this->setMetaData('viewport', 'width=device-width, initial-scale=1');
             <a href="<?php echo $this->baseurl ?>"><?php echo htmlspecialchars($sitename); ?></a>
         </h1>
         <!-- mobile button -->
-		<?php if ($this->countModules('sidebar')): ?>
+		<?php if ($this->countModules('sidebar') or $this->countModules('nav') or $this->countModules('search')): ?>
             <button class="sidebar-menu" aria-label="Navigation"></button>
 		<?php endif; ?>
     </section>

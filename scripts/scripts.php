@@ -9,17 +9,19 @@ $c_buttontext = $this->params->get('cookiebuttontext');
 $c_linktext   = $this->params->get('cookielinktext');
 $c_link       = $this->params->get('cookielink');
 // slideshow slider
-$slider       = $this->params->get('slideshow');
+$slider = $this->params->get('slideshow');
 // code display
-$prism       = $this->params->get('js-prism');
+$prism = $this->params->get('js-prism');
+// subnav
+$subnav = $this->params->get('js-subnav');
 ?>
 
-<!-- cookie info -->
+    <!-- cookie info -->
 <?php if ($c_accept == 1) : ?>
 
-	<?php if(isset($_POST['set_cookie'])):
-		if($_POST['set_cookie']==1)
-			setcookie("acceptcookie", "yes", time()+3600*24*365, "/");
+	<?php if (isset($_POST['set_cookie'])):
+		if ($_POST['set_cookie'] == 1)
+			setcookie("acceptcookie", "yes", time() + 3600 * 24 * 365, "/");
 		?>
 	<?php endif; ?>
 
@@ -62,31 +64,32 @@ $prism       = $this->params->get('js-prism');
                 $ca_container.delay(1000).slideDown('slow');
 
                 $ca_accept.click(function(){
-                    setCookie("acceptcookie","yes",365);
-                    jQuery.post('<?php echo JURI::current(); ?>', 'set_cookie=1', function(){});
+                    setCookie("acceptcookie", "yes", 365);
+                    jQuery.post('<?php echo JURI::current(); ?>', 'set_cookie=1', function () {
+                    });
                     $ca_container.slideUp('slow');
                 });
             }
         });
-	</script>
+    </script>
 <?php endif; ?>
 
     <!-- script für nav -->
-<?php if ($this->countModules('nav')): ?>
+<?php if ($this->countModules('nav') and ($subnav)): ?>
     <script type="text/javascript" src="<?php echo $tpath . '/scripts/nav.js'; ?>"></script>
 <?php endif; ?>
 
-<!-- script für aside -->
-<?php if ($this->countModules('sidebar')): ?>
-	<script type="text/javascript" src="<?php echo $tpath . '/scripts/sidebar.js'; ?>"></script>
+    <!-- script für aside -->
+<?php if ($this->countModules('sidebar') or $this->countModules('nav') or $this->countModules('search')): ?>
+    <script type="text/javascript" src="<?php echo $tpath . '/scripts/sidebar.js'; ?>"></script>
 <?php endif; ?>
 
-<!-- go to top plus sticky nav -->
-<script type="text/javascript" src="<?php echo $tpath . '/scripts/plugins.js'; ?>"></script>
+    <!-- go to top plus sticky nav -->
+    <script type="text/javascript" src="<?php echo $tpath . '/scripts/plugins.js'; ?>"></script>
 
-<!-- google analytics code asynchron + anonym -->
+    <!-- google analytics code asynchron + anonym -->
 <?php if ($analytics != "UA-XXXXX-X"): ?>
-	<script type="text/javascript">
+    <script type="text/javascript">
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', '<?php echo htmlspecialchars($analytics); ?>']);
         _gaq.push(['_gat._anonymizeIp']);

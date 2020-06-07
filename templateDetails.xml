@@ -81,10 +81,21 @@
                        default="0"
                        label="Code display: prism"
                        description="enable prism js"
-                       class="btn-group btn-group-yesno" >
+                       class="btn-group btn-group-yesno">
                     <option value="1">JYES</option>
                     <option value="0">JNO</option>
                 </field>
+
+                <field name="js-subnav"
+                       type="radio"
+                       default="0"
+                       label="subnav js"
+                       description="enable subnav js"
+                       class="btn-group btn-group-yesno">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
             </fieldset>
 
             <fieldset name="advanced">
